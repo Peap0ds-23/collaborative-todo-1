@@ -19,7 +19,12 @@ export default async function SignUpPage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
+    <main
+      className="flex min-h-screen flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('https://plus.unsplash.com/premium_photo-1683309563562-aa3cfde9ed10?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9kbyUyMGxpc3R8ZW58MHx8MHx8fDA%3D')`,
+      }}
+    >
       <Card className="w-full max-w-md">
         <CardHeader>
           <div className="flex flex-col items-center space-y-2">
