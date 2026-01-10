@@ -71,7 +71,7 @@ export default function SignUpForm() {
                 <Input
                     id="name"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="Donald J. Trump"
                     type="text"
                     value={formData.name}
                     onChange={handleChange("name")}
@@ -86,7 +86,7 @@ export default function SignUpForm() {
                 <Input
                     id="email"
                     name="email"
-                    placeholder="m@example.com"
+                    placeholder="president@usa.com"
                     type="email"
                     value={formData.email}
                     onChange={handleChange("email")}
@@ -101,6 +101,7 @@ export default function SignUpForm() {
                 <Input
                     id="password"
                     name="password"
+                    placeholder="••••••••"
                     type="password"
                     value={formData.password}
                     onChange={handleChange("password")}
