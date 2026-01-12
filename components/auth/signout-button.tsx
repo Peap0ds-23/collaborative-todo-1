@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { signout } from "@/actions/auth/actions";
 import { Button } from "@/components/ui/button";
+import { LoadingSpinner, LogOutIcon } from "@/components/icons";
 
 export default function SignOutButton() {
   const [isLoading, setIsLoading] = useState(false);
@@ -43,51 +44,10 @@ export default function SignOutButton() {
       title="Sign out"
     >
       {isLoading ? (
-        <LoadingSpinner className="w-5 h-5" />
+        <LoadingSpinner className="w-5 h-5 text-gray-700 dark:text-gray-400" />
       ) : (
         <LogOutIcon className="w-5 h-5 text-gray-700 dark:text-gray-400" />
       )}
     </Button>
-  );
-}
-
-function LoadingSpinner(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`animate-spin text-gray-700 dark:text-gray-400 ${props.className || ''}`}
-    >
-      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-    </svg>
-  );
-}
-
-function LogOutIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-      <polyline points="16 17 21 12 16 7" />
-      <line x1="21" x2="9" y1="12" y2="12" />
-    </svg>
   );
 }
