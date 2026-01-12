@@ -1,17 +1,14 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
-import { signin } from "@/actions/auth/actions";
 
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import {
   CardHeader,
   CardContent,
   CardFooter,
   Card,
 } from "@/components/ui/card";
+import SignInForm from "@/components/auth/SignInForm";
 
 function getErrorMessage(error: string | undefined): string | null {
   if (!error) return null;
@@ -61,23 +58,7 @@ export default async function SignInPage({
               {errorMessage}
             </div>
           )}
-          <form className="space-y-6">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                name="email"
-                placeholder="m@example.com"
-                required
-                type="email"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
-              <Input id="password" name="password" placeholder="••••••••" required type="password" />
-            </div>
-            <Button formAction={signin} className="w-full">Sign in</Button>
-          </form>
+          <SignInForm />
         </CardContent>
         <CardFooter className="flex flex-col space-y-2">
           <Link className="text-sm underline" href="/signup">
