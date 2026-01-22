@@ -2,9 +2,6 @@
 
 A collaborative task management web application that allows users to create, manage, and share tasks with others in real time.
 
-![Login Page](./assets/LoginPage.png)
-
-
 ## Project Overview
 
 This is a collaborative task management web application that has been created by me, that allows users to create, manage, and share tasks with others in real-time. We can create tasks with titles, descriptions, due dates, and priorities, then share those tasks with collaborators via email. When a task is shared, both the owner and collaborator can view, edit and complete it, with all changes synced in real-time.
@@ -52,16 +49,3 @@ This is a collaborative task management web application that has been created by
 | Next.js Server | Backend logic co-located with frontend, executed on the server  |
 | Supabase Auth  | Email/password authentication with secure cookie-based sessions |
 | Supabase SSR   | Server-side Supabase client for Next.js App Router              |
-
-
-
-## Preview
-
-### SignIn Page
-![Login Page](./assets/LoginPage.png)
-
-### SignUp Page
-![Signup Page](./assets/SignupPage.png)
-
-### Home Page
-![Home Page](./assets/HomePage.png)
