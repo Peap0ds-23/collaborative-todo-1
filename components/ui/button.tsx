@@ -23,8 +23,8 @@ const baseStyles = "inline-flex items-center justify-center whitespace-nowrap ro
 
 const Button = ({ className="", variant = "default", size = "default", asChild = false, ...props }) => {
   const Comp = asChild ? Slot : "button"
-  const variantClass = buttonVariants.variant[variant as keyof typeof buttonVariants.variant] || buttonVariants.variant.default
-  const sizeClass = buttonVariants.size[size as keyof typeof buttonVariants.size] || buttonVariants.size.default
+  const variantClass = buttonVariants.variant[variant] || buttonVariants.variant.default
+  const sizeClass = buttonVariants.size[size] || buttonVariants.size.default
 
   return (
     <Comp
